@@ -200,7 +200,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
 </style></head><body>
       <header>
         <div class="title">Codex Crypto Cycle Dashboard</div>
-        <div class="meta">2026-06-28 · data as of 15:45 ET · <span class='live'>● LIVE intraday — provisional, not a close</span></div>
+        <div class="meta">2026-06-28 · data as of 16:04 ET · <span class='live'>● LIVE intraday — provisional, not a close</span></div>
       </header>
       
       <section class="codex">
@@ -219,7 +219,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
               <div class="sub">future-low posterior · evidence HIGH</div>
             </div>
             <div class="spotbox">
-              <b>$59,353</b>
+              <b>$59,424</b>
               <span>live price</span>
             </div>
           </div>
@@ -237,13 +237,13 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
             <div class='prob'><b style='color:#f85149'>99%</b><span>low below spot</span></div>
             <div class='prob'><b style='color:#f85149'>96%</b><span>down another 10%</span></div>
             <div class='prob'><b style='color:#f85149'>88%</b><span>down another 20%</span></div>
-            <div class='prob'><b style='color:#f85149'>70%</b><span>down another 30%</span></div>
+            <div class='prob'><b style='color:#f85149'>71%</b><span>down another 30%</span></div>
           </div>
           <div class="decision">
             <div class="decision-main">
               <span>Codex full-policy target <b>18%</b></span>
               <span class="sub">deployed 18% · cash/reserve 82% = 100% · raw posterior target 18%</span>
-              <span class="sub">mode bottom accumulation · hard reserve floor 20% · reserve released 0% · redeployed 0% · avg cost $67,892</span>
+              <span class="sub">mode bottom accumulation · hard reserve floor 20% · reserve released 0% · redeployed 0% · avg cost $67,916</span>
             </div>
             <div class="minirows">
               <div class="minirow"><span>lowest-regret rows</span><span>target</span><span>score</span></div>
@@ -258,7 +258,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
               <div class="sub">future-low posterior · evidence HIGH</div>
             </div>
             <div class="spotbox">
-              <b>$1,566</b>
+              <b>$1,564</b>
               <span>live price</span>
             </div>
           </div>
@@ -291,7 +291,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
           </div>
         </section></div></section>
       <section class="planner"><h3>Weekly buy planner <span class="sub" style="font-weight:400">· Codex full-policy target</span></h3><p class='sub'>Enter your total pool and how much you've <b>already deployed</b>. Each week it compares that against the full-policy target, catches up gradually if you are behind, and holds the remaining cash for either a deeper low or confirmation that the low is behind us. Runs entirely in your browser; nothing is sent anywhere.</p><div class="pgrid"><div class="pin"><label>BTC total pool</label><div class="inwrap"><span>$</span><input id="pool-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 100000"></div></div><div class="pin"><label>BTC already deployed</label><div class="inwrap"><span>$</span><input id="dep-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div><div class="pin"><label>ETH total pool</label><div class="inwrap"><span>$</span><input id="pool-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 50000"></div></div><div class="pin"><label>ETH already deployed</label><div class="inwrap"><span>$</span><input id="dep-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div></div><div id="pout" class="pout"></div><script>
-const POLICY={"BTC": {"now_f": 0.1796, "tgt_f": 0.1796, "res_f": 0.8204, "H": 52, "anchor": 22297, "regime": "FULL POLICY", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1948, "tgt_f": 0.1948, "res_f": 0.8052, "H": 52, "anchor": 674, "regime": "FULL POLICY", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
+const POLICY={"BTC": {"now_f": 0.1793, "tgt_f": 0.1793, "res_f": 0.8207, "H": 52, "anchor": 22297, "regime": "FULL POLICY", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1948, "tgt_f": 0.1948, "res_f": 0.8052, "H": 52, "anchor": 674, "regime": "FULL POLICY", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
 
 function fmt(x){return '$'+Math.round(x).toLocaleString('en-US');}
 function pct(x){return (x*100).toFixed(0)+'%';}
