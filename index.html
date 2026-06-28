@@ -143,11 +143,24 @@ table.d tr:last-child td { border-bottom:none; }
 .hchip-go:hover { background:#388bfd; }
 @media (max-width:620px) { .hpop-cals { flex-direction:column; gap:14px; }
   .hpop { left:50%; transform:translateX(-50%); } }
-#histcap { width:min(1720px,calc(100vw - 48px)); max-width:calc(100vw - 48px); }
-#histwrap { width:min(1720px,calc(100vw - 48px)); max-width:calc(100vw - 48px);
+#histcap { width:min(1320px,calc(100vw - 72px)); max-width:calc(100vw - 72px); }
+#histwrap { width:min(1320px,calc(100vw - 72px)); max-width:calc(100vw - 72px);
             overflow-x:auto; border-radius:10px; }
-#histwrap table.d { width:100%; min-width:1480px; max-width:none; }
-#histwrap table.d th, #histwrap table.d td { white-space:nowrap; padding-left:10px; padding-right:10px; }
+#histwrap table.d { width:100%; min-width:1120px; max-width:none; table-layout:fixed; }
+#histwrap table.d th, #histwrap table.d td { white-space:nowrap; padding-left:8px; padding-right:8px; }
+#histwrap table.d th:nth-child(1), #histwrap table.d td:nth-child(1) { width:92px; }
+#histwrap table.d th:nth-child(2), #histwrap table.d td:nth-child(2),
+#histwrap table.d th:nth-child(8), #histwrap table.d td:nth-child(8) { width:96px; }
+#histwrap table.d th:nth-child(3), #histwrap table.d td:nth-child(3),
+#histwrap table.d th:nth-child(9), #histwrap table.d td:nth-child(9) { width:72px; }
+#histwrap table.d th:nth-child(4), #histwrap table.d td:nth-child(4),
+#histwrap table.d th:nth-child(10), #histwrap table.d td:nth-child(10) { width:90px; }
+#histwrap table.d th:nth-child(5), #histwrap table.d td:nth-child(5),
+#histwrap table.d th:nth-child(11), #histwrap table.d td:nth-child(11) { width:92px; }
+#histwrap table.d th:nth-child(6), #histwrap table.d td:nth-child(6),
+#histwrap table.d th:nth-child(12), #histwrap table.d td:nth-child(12) { width:76px; }
+#histwrap table.d th:nth-child(7), #histwrap table.d td:nth-child(7),
+#histwrap table.d th:nth-child(13), #histwrap table.d td:nth-child(13) { width:76px; }
 #histwrap table.d th:first-child, #histwrap table.d td:first-child { position:sticky; left:0; z-index:1; }
 #histwrap table.d th:first-child { z-index:2; background:#1b212a; }
 #histwrap table.d td:first-child { background:#161b22; }
@@ -178,12 +191,13 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
   .planner { margin:6px 16px 8px; padding:16px; }
   .wrap { padding:4px 16px 8px; }
   .rangepick, .htrig { width:100%; min-width:0; }
+  #histcap, #histwrap { width:calc(100vw - 32px); max-width:calc(100vw - 32px); }
   table.d th, table.d td { padding:6px 8px; font-size:12px; }
 }
 </style></head><body>
       <header>
         <div class="title">Codex Crypto Cycle Dashboard</div>
-        <div class="meta">2026-06-28 · data as of 10:35 ET · <span class='live'>● LIVE intraday — provisional, not a close</span></div>
+        <div class="meta">2026-06-28 · data as of 10:39 ET · <span class='live'>● LIVE intraday — provisional, not a close</span></div>
       </header>
       
       <section class="codex">
@@ -266,7 +280,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
           </div>
         </section></div></section>
       <section class="planner"><h3>Weekly buy planner <span class="sub" style="font-weight:400">· Codex posterior target</span></h3><p class='sub'>Enter your total pool and how much you've <b>already deployed</b>. Each week it compares that against the Codex posterior target, paces the remaining working capital over the horizon, and holds reserve for either a deeper low or confirmation that the low is behind us. Runs entirely in your browser; nothing is sent anywhere.</p><div class="pgrid"><div class="pin"><label>BTC total pool</label><div class="inwrap"><span>$</span><input id="pool-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 100000"></div></div><div class="pin"><label>BTC already deployed</label><div class="inwrap"><span>$</span><input id="dep-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div><div class="pin"><label>ETH total pool</label><div class="inwrap"><span>$</span><input id="pool-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 50000"></div></div><div class="pin"><label>ETH already deployed</label><div class="inwrap"><span>$</span><input id="dep-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div></div><div id="pout" class="pout"></div><script>
-const POLICY={"BTC": {"now_f": 0.1768, "tgt_f": 0.8, "res_f": 0.2935, "H": 52, "anchor": 32292, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1841, "tgt_f": 0.7, "res_f": 0.3774, "H": 52, "anchor": 1002, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
+const POLICY={"BTC": {"now_f": 0.1769, "tgt_f": 0.8, "res_f": 0.2935, "H": 52, "anchor": 32292, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1841, "tgt_f": 0.7, "res_f": 0.3774, "H": 52, "anchor": 1002, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
 
 function fmt(x){return '$'+Math.round(x).toLocaleString('en-US');}
 function pct(x){return (x*100).toFixed(0)+'%';}
