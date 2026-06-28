@@ -1,12 +1,10 @@
 {
   "schema_version": 1,
   "edition": "codex-posterior",
-  "generated_at": "2026-06-27T23:37:55",
-  "run_date": "2026-06-27",
+  "generated_at": "2026-06-28T09:42:35",
+  "run_date": "2026-06-28",
   "data_as_of": "2026-06-27",
-  "data_age_days": 0,
-  "model_version": "12.0.0",
-  "model_version_hash": "ea912512bdb515a0",
+  "data_age_days": 1,
   "masked": true,
   "static": true,
   "live_intraday": false,
@@ -41,7 +39,7 @@
         "down_40": 0.443768
       },
       "decision": {
-        "legacy_now_fraction": 0.323077,
+        "score_input_now_fraction": 0.323077,
         "codex_now_fraction": 0.180734,
         "working_fraction": 0.8,
         "reserve_fraction": 0.29289,
@@ -79,7 +77,7 @@
             "score": 0.307951
           },
           {
-            "label": "legacy target",
+            "label": "score-input target",
             "target_fraction": 0.323077,
             "expected_mark_to_low": 0.206513,
             "wait_regret": 0.005852,
@@ -142,7 +140,7 @@
         "down_40": 0.15198
       },
       "decision": {
-        "legacy_now_fraction": 0.282692,
+        "score_input_now_fraction": 0.282692,
         "codex_now_fraction": 0.186147,
         "working_fraction": 0.7,
         "reserve_fraction": 0.377078,
@@ -180,7 +178,7 @@
             "score": 0.225366
           },
           {
-            "label": "legacy target",
+            "label": "score-input target",
             "target_fraction": 0.282692,
             "expected_mark_to_low": 0.116249,
             "wait_regret": 0.008138,
@@ -216,33 +214,25 @@
   "assets": {
     "BTC": {
       "price": 59934.21,
-      "regime": "ACCUMULATE",
-      "accumulation_verdict": "LIKELY",
-      "conviction": "MODERATE",
-      "scores": {
-        "cycle": 13.35,
-        "bottom": 69.41,
-        "top": 0.0,
-        "gate": 0.7827
+      "target_fraction": 0.1807,
+      "working_fraction": 0.8,
+      "reserve_fraction": 0.2929,
+      "future_low": {
+        "p10": 27594.83,
+        "p50": 37161.27,
+        "p90": 50044.15
       },
-      "action": {
-        "deploy_now_fraction": 0.3231,
-        "deploy_fraction": 0.8,
-        "reserve_fraction": 0.2,
-        "horizon_weeks": 52,
-        "anchor": 22296.76,
-        "position_target": 0.5941
+      "timing": {
+        "p10": "2026-07-27",
+        "p50": "2026-09-19",
+        "p90": "2026-11-12"
       },
-      "bottom_prediction": {
-        "price": 37161.27,
-        "date": "2026-09-19",
-        "implied_decline": -0.379966,
-        "lo_price": 28056.34,
-        "hi_price": 47845.51,
-        "lo_date": "2026-07-19",
-        "hi_date": "2026-11-06",
-        "reg_weight": 0.55,
-        "ana_weight": 0.45
+      "probabilities": {
+        "low_below_spot": 0.980208,
+        "down_10": 0.945687,
+        "down_20": 0.863736,
+        "down_30": 0.699272,
+        "down_40": 0.443768
       },
       "diagnostics": {
         "label": "MODERATE",
@@ -258,44 +248,29 @@
         "analogue_effective_n": 2.9998739129712146,
         "price_band_pct": 0.5325214100594562,
         "date_window_days": 109
-      },
-      "event_track_record": {
-        "n_events": 6,
-        "avg_forward_12m": 1.771776,
-        "avg_max_adverse": -0.275541,
-        "win_rate": 0.666667,
-        "worst_drawdown": -0.590392
       }
     },
     "ETH": {
       "price": 1571.66,
-      "regime": "ACCUMULATE",
-      "accumulation_verdict": "LIKELY",
-      "conviction": "MODERATE",
-      "scores": {
-        "cycle": 15.26,
-        "bottom": 65.83,
-        "top": 0.0,
-        "gate": 0.7349
+      "target_fraction": 0.1861,
+      "working_fraction": 0.7,
+      "reserve_fraction": 0.3771,
+      "future_low": {
+        "p10": 903.13,
+        "p50": 1123.47,
+        "p90": 1397.56
       },
-      "action": {
-        "deploy_now_fraction": 0.2827,
-        "deploy_fraction": 0.7,
-        "reserve_fraction": 0.3,
-        "horizon_weeks": 52,
-        "anchor": 674.08,
-        "position_target": 0.5583
+      "timing": {
+        "p10": "2026-07-17",
+        "p50": "2026-08-20",
+        "p90": "2026-09-23"
       },
-      "bottom_prediction": {
-        "price": 1123.47,
-        "date": "2026-08-20",
-        "implied_decline": -0.285171,
-        "lo_price": 844.63,
-        "hi_price": 1307.04,
-        "lo_date": "2026-07-16",
-        "hi_date": "2026-09-23",
-        "reg_weight": 0.35,
-        "ana_weight": 0.65
+      "probabilities": {
+        "low_below_spot": 0.975624,
+        "down_10": 0.911852,
+        "down_20": 0.745636,
+        "down_30": 0.45103,
+        "down_40": 0.15198
       },
       "diagnostics": {
         "label": "HIGH",
@@ -310,13 +285,6 @@
         "analogue_effective_n": 2.999291463479064,
         "price_band_pct": 0.41158856340890476,
         "date_window_days": 68
-      },
-      "event_track_record": {
-        "n_events": 9,
-        "avg_forward_12m": 0.262244,
-        "avg_max_adverse": -0.27933,
-        "win_rate": 0.666667,
-        "worst_drawdown": -0.786369
       }
     }
   }
