@@ -110,7 +110,11 @@ table.d tr:last-child td { border-bottom:none; }
 .hpop { position:absolute; z-index:40; top:calc(100% + 6px); left:0; display:none; background:#161b22;
         border:1px solid #30363d; border-radius:12px; padding:12px 40px; box-shadow:0 12px 34px rgba(0,0,0,.55); }
 .hpop.open { display:block; }
-.hnav { position:absolute; top:12px; width:28px; height:28px; border-radius:7px; background:#21262d;
+.hjump { display:flex; justify-content:center; gap:8px; margin:0 0 10px; }
+.hjump select { background:#0d1117; color:#c9d1d9; border:1px solid #30363d; border-radius:8px;
+                padding:7px 26px 7px 9px; font-size:12.5px; outline:none; }
+.hjump select:focus { border-color:#1f6feb; }
+.hnav { position:absolute; top:50px; width:28px; height:28px; border-radius:7px; background:#21262d;
         color:#c9d1d9; border:1px solid #30363d; font-size:16px; line-height:1; cursor:pointer; }
 .hnav:hover:not(:disabled) { background:#2a3038; }
 .hnav:disabled { color:#484f58; cursor:default; opacity:.5; }
@@ -139,9 +143,14 @@ table.d tr:last-child td { border-bottom:none; }
 .hchip-go:hover { background:#388bfd; }
 @media (max-width:620px) { .hpop-cals { flex-direction:column; gap:14px; }
   .hpop { left:50%; transform:translateX(-50%); } }
-#histwrap table.d { max-width:1120px; }
-#histwrap { max-width:100%; overflow-x:auto; }
-#histwrap table.d th, #histwrap table.d td { white-space:nowrap; }  /* keep ISO dates on one line */
+#histcap { width:min(1720px,calc(100vw - 48px)); max-width:calc(100vw - 48px); }
+#histwrap { width:min(1720px,calc(100vw - 48px)); max-width:calc(100vw - 48px);
+            overflow-x:auto; border-radius:10px; }
+#histwrap table.d { width:100%; min-width:1480px; max-width:none; }
+#histwrap table.d th, #histwrap table.d td { white-space:nowrap; padding-left:10px; padding-right:10px; }
+#histwrap table.d th:first-child, #histwrap table.d td:first-child { position:sticky; left:0; z-index:1; }
+#histwrap table.d th:first-child { z-index:2; background:#1b212a; }
+#histwrap table.d td:first-child { background:#161b22; }
 .rmark { color:#6e7681; cursor:help; font-weight:700; }
 .gallery { display:grid; grid-template-columns:1fr; gap:16px; }
 @media (min-width:880px){ .gallery { grid-template-columns:1fr 1fr; } }
@@ -174,7 +183,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
 </style></head><body>
       <header>
         <div class="title">Codex Crypto Cycle Dashboard</div>
-        <div class="meta">2026-06-28 · data as of 10:30 ET · <span class='live'>● LIVE intraday — provisional, not a close</span></div>
+        <div class="meta">2026-06-28 · data as of 2026-06-27 (1d old) · 10:31 ET</div>
       </header>
       
       <section class="codex">
@@ -190,25 +199,25 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
           <div class="posterior-top">
             <div>
               <h3>BTC</h3>
-              <div class="sub">future-low posterior · evidence HIGH</div>
+              <div class="sub">future-low posterior · evidence MODERATE</div>
             </div>
             <span class="pill" style="background:#1f6feb">CODEX</span>
           </div>
           <div class="qgrid">
-            <div class="qbox"><b>$28,457</b><span>low p10</span></div>
+            <div class="qbox"><b>$27,595</b><span>low p10</span></div>
             <div class="qbox"><b>$37,161</b><span>median low</span></div>
-            <div class="qbox"><b>$48,528</b><span>low p90</span></div>
+            <div class="qbox"><b>$50,044</b><span>low p90</span></div>
           </div>
           <div class="qgrid">
-            <div class="qbox"><b>2026-07-26</b><span>early</span></div>
+            <div class="qbox"><b>2026-07-27</b><span>early</span></div>
             <div class="qbox"><b>2026-09-19</b><span>median timing</span></div>
-            <div class="qbox"><b>2026-11-13</b><span>late</span></div>
+            <div class="qbox"><b>2026-11-12</b><span>late</span></div>
           </div>
           <div class="probgrid">
-            <div class='prob'><b style='color:#f85149'>99%</b><span>low below spot</span></div>
-            <div class='prob'><b style='color:#f85149'>96%</b><span>down another 10%</span></div>
-            <div class='prob'><b style='color:#f85149'>89%</b><span>down another 20%</span></div>
-            <div class='prob'><b style='color:#f85149'>72%</b><span>down another 30%</span></div>
+            <div class='prob'><b style='color:#f85149'>98%</b><span>low below spot</span></div>
+            <div class='prob'><b style='color:#f85149'>95%</b><span>down another 10%</span></div>
+            <div class='prob'><b style='color:#f85149'>86%</b><span>down another 20%</span></div>
+            <div class='prob'><b style='color:#f85149'>70%</b><span>down another 30%</span></div>
           </div>
           <div class="decision">
             <div class="decision-main">
@@ -241,23 +250,23 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
           </div>
           <div class="probgrid">
             <div class='prob'><b style='color:#f85149'>98%</b><span>low below spot</span></div>
-            <div class='prob'><b style='color:#f85149'>92%</b><span>down another 10%</span></div>
+            <div class='prob'><b style='color:#f85149'>91%</b><span>down another 10%</span></div>
             <div class='prob'><b style='color:#f85149'>75%</b><span>down another 20%</span></div>
-            <div class='prob'><b style='color:#d29922'>46%</b><span>down another 30%</span></div>
+            <div class='prob'><b style='color:#d29922'>45%</b><span>down another 30%</span></div>
           </div>
           <div class="decision">
             <div class="decision-main">
-              <span>Codex target now <b>18%</b></span>
+              <span>Codex target now <b>19%</b></span>
               <span class="sub">working cap 70% · reserve 38%</span>
             </div>
             <div class="minirows">
               <div class="minirow"><span>lowest-regret rows</span><span>target</span><span>score</span></div>
-              <div class='minirow'><span>wait</span><span>0%</span><span>0.01</span></div><div class='minirow'><span>starter</span><span>18%</span><span>0.21</span></div><div class='minirow'><span>codex target</span><span>18%</span><span>0.23</span></div>
+              <div class='minirow'><span>wait</span><span>0%</span><span>0.01</span></div><div class='minirow'><span>starter</span><span>18%</span><span>0.21</span></div><div class='minirow'><span>codex target</span><span>19%</span><span>0.23</span></div>
             </div>
           </div>
         </section></div></section>
       <section class="planner"><h3>Weekly buy planner <span class="sub" style="font-weight:400">· Codex posterior target</span></h3><p class='sub'>Enter your total pool and how much you've <b>already deployed</b>. Each week it compares that against the Codex posterior target, paces the remaining working capital over the horizon, and holds reserve for either a deeper low or confirmation that the low is behind us. Runs entirely in your browser; nothing is sent anywhere.</p><div class="pgrid"><div class="pin"><label>BTC total pool</label><div class="inwrap"><span>$</span><input id="pool-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 100000"></div></div><div class="pin"><label>BTC already deployed</label><div class="inwrap"><span>$</span><input id="dep-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div><div class="pin"><label>ETH total pool</label><div class="inwrap"><span>$</span><input id="pool-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 50000"></div></div><div class="pin"><label>ETH already deployed</label><div class="inwrap"><span>$</span><input id="dep-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div></div><div id="pout" class="pout"></div><script>
-const POLICY={"BTC": {"now_f": 0.1769, "tgt_f": 0.8, "res_f": 0.2935, "H": 52, "anchor": 32292, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1844, "tgt_f": 0.7, "res_f": 0.3773, "H": 52, "anchor": 1002, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
+const POLICY={"BTC": {"now_f": 0.1807, "tgt_f": 0.8, "res_f": 0.2929, "H": 52, "anchor": 31773, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1861, "tgt_f": 0.7, "res_f": 0.3771, "H": 52, "anchor": 1002, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
 
 function fmt(x){return '$'+Math.round(x).toLocaleString('en-US');}
 function pct(x){return (x*100).toFixed(0)+'%';}
@@ -323,8 +332,8 @@ function recompute(){
 recompute();
 </script></section>
       <div class="wrap">
-        <h3>Model evidence <span class='sub'>(event-level, not daily-trigger inflated)</span></h3><p class='sub' style='max-width:780px;margin:-2px 0 10px;line-height:1.55'>This table collapses adjacent daily bottom-score triggers into one independent event per bottom cluster. The daily trigger count is shown only as a diagnostic, because adjacent days in the same bear market are not independent samples.</p><div class='tablewrap'><table class='d'><tr><th>Asset</th><th>Events</th><th>Daily triggers</th><th>Win</th><th>Avg&nbsp;12m</th><th>Avg&nbsp;DD</th><th>Worst&nbsp;DD</th><th>Quality</th></tr><tr><td>BTC</td><td>6</td><td>343</td><td>67%</td><td>+177%</td><td>-28%</td><td>-59%</td><td>HIGH</td></tr><tr><td>ETH</td><td>9</td><td>261</td><td>67%</td><td>+26%</td><td>-28%</td><td>-79%</td><td>HIGH</td></tr></table></div>
-        <h3>Codex history <span class='sub'>(daily close snapshots)</span></h3><p class='sub' style='max-width:820px;margin:-2px 0 10px;line-height:1.55'><b>What this is for:</b> track how the Codex posterior changes across true close snapshots: closing price, target allocation, median future low, median timing, downside probability and evidence quality. Click the date field to pick a <b>start</b> then an <b>end</b> date in one calendar (or use a quick preset — 30d / 90d / 1y / All); defaults to the latest close. Closes only — provisional intraday spot snapshots are excluded.</p><div class='hctl'><div class='rangepick'><button type='button' id='hist-trig' class='htrig' onclick='calToggle(event)' aria-haspopup='dialog' aria-expanded='false' disabled><span class='hcalico'>📅</span><span id='hist-trig-txt'>Loading…</span><span class='hcar'>▾</span></button><div id='hist-pop' class='hpop' role='dialog' aria-label='Pick a date range'><button type='button' class='hnav prev' id='hist-prev' onclick='calNav(-1)' aria-label='Previous month'>‹</button><button type='button' class='hnav next' id='hist-next' onclick='calNav(1)' aria-label='Next month'>›</button><div id='hist-grids' class='hpop-cals'></div><div class='hpre'><button type='button' class='hchip' onclick="calPreset('latest')">Latest</button><button type='button' class='hchip' onclick="calPreset('30')">30d</button><button type='button' class='hchip' onclick="calPreset('90')">90d</button><button type='button' class='hchip' onclick="calPreset('365')">1y</button><button type='button' class='hchip' onclick="calPreset('all')">All</button><span class='hpre-sp'></span><span id='hist-sel' class='sub'></span><button type='button' class='hchip hchip-go' onclick='calClose()'>Done</button></div></div></div><input type='hidden' id='hist-from'><input type='hidden' id='hist-to'></div><div id='histcap' class='sub' style='margin:6px 0'></div><div id='histwrap' style='overflow-x:auto'><div class='sub'>Loading history…</div></div><script>
+        <h3>Model evidence <span class='sub'>(event-level, not daily-trigger inflated)</span></h3><p class='sub' style='max-width:780px;margin:-2px 0 10px;line-height:1.55'>This table collapses adjacent daily bottom-score triggers into one independent event per bottom cluster. The daily trigger count is shown only as a diagnostic, because adjacent days in the same bear market are not independent samples.</p><div class='tablewrap'><table class='d'><tr><th>Asset</th><th>Events</th><th>Daily triggers</th><th>Win</th><th>Avg&nbsp;12m</th><th>Avg&nbsp;DD</th><th>Worst&nbsp;DD</th><th>Quality</th></tr><tr><td>BTC</td><td>6</td><td>343</td><td>67%</td><td>+177%</td><td>-28%</td><td>-59%</td><td>MODERATE</td></tr><tr><td>ETH</td><td>9</td><td>261</td><td>67%</td><td>+26%</td><td>-28%</td><td>-79%</td><td>HIGH</td></tr></table></div>
+        <h3>Codex history <span class='sub'>(daily close snapshots)</span></h3><p class='sub' style='max-width:820px;margin:-2px 0 10px;line-height:1.55'><b>What this is for:</b> track how the Codex posterior changes across true close snapshots: closing price, target allocation, median future low, median timing, downside probability and evidence quality. Click the date field, jump by year/month, then pick a <b>start</b> and <b>end</b> date (or use a quick preset — 30d / 90d / 1y / All); defaults to the latest close. Closes only — provisional intraday spot snapshots are excluded.</p><div class='hctl'><div class='rangepick'><button type='button' id='hist-trig' class='htrig' onclick='calToggle(event)' aria-haspopup='dialog' aria-expanded='false' disabled><span class='hcalico'>📅</span><span id='hist-trig-txt'>Loading…</span><span class='hcar'>▾</span></button><div id='hist-pop' class='hpop' role='dialog' aria-label='Pick a date range'><div class='hjump'><select id='hist-year' onchange='calJump()' aria-label='Jump to year' disabled></select><select id='hist-month' onchange='calJump()' aria-label='Jump to month' disabled></select></div><button type='button' class='hnav prev' id='hist-prev' onclick='calNav(-1)' aria-label='Previous month'>‹</button><button type='button' class='hnav next' id='hist-next' onclick='calNav(1)' aria-label='Next month'>›</button><div id='hist-grids' class='hpop-cals'></div><div class='hpre'><button type='button' class='hchip' onclick="calPreset('latest')">Latest</button><button type='button' class='hchip' onclick="calPreset('30')">30d</button><button type='button' class='hchip' onclick="calPreset('90')">90d</button><button type='button' class='hchip' onclick="calPreset('365')">1y</button><button type='button' class='hchip' onclick="calPreset('all')">All</button><span class='hpre-sp'></span><span id='hist-sel' class='sub'></span><button type='button' class='hchip hchip-go' onclick='calClose()'>Done</button></div></div></div><input type='hidden' id='hist-from'><input type='hidden' id='hist-to'></div><div id='histcap' class='sub' style='margin:6px 0'></div><div id='histwrap' style='overflow-x:auto'><div class='sub'>Loading history…</div></div><script>
 var HIST=[];
 function histFmt(x){return x==null?'—':'$'+Math.round(x).toLocaleString('en-US');}
 function histN(x){return x==null?'—':x;}
@@ -349,6 +358,27 @@ function fmtShort(s){if(!s)return '';var d=parseYMD(s);return MONS[d.getMonth()]
 function leftMin(){var d=parseYMD(DLO);return mIdx(d.getFullYear(),d.getMonth());}
 function leftMax(){var d=parseYMD(DHI);var mx=mIdx(d.getFullYear(),d.getMonth())-1,mn=leftMin();return mx<mn?mn:mx;}
 function clampLeft(i){var mn=leftMin(),mx=leftMax();return i<mn?mn:(i>mx?mx:i);}
+function calInitJump(){
+  var ysel=document.getElementById('hist-year'),msel=document.getElementById('hist-month');
+  if(!ysel||!msel||!DLO||!DHI)return;
+  var d0=parseYMD(DLO),d1=parseYMD(DHI),yh='',mh='';
+  for(var y=d0.getFullYear();y<=d1.getFullYear();y++)yh+='<option value="'+y+'">'+y+'</option>';
+  for(var m=0;m<12;m++)mh+='<option value="'+m+'">'+MONS[m]+'</option>';
+  ysel.innerHTML=yh;msel.innerHTML=mh;ysel.disabled=false;msel.disabled=false;calSyncJump();
+}
+function calSyncJump(){
+  var ysel=document.getElementById('hist-year'),msel=document.getElementById('hist-month');
+  if(!ysel||!msel||!DLO)return;
+  var idx=clampLeft(calLeft),y=Math.floor(idx/12),m=idx%12;
+  ysel.value=String(y);msel.value=String(m);
+}
+function calJump(){
+  var ysel=document.getElementById('hist-year'),msel=document.getElementById('hist-month');
+  if(!ysel||!msel)return;
+  var y=parseInt(ysel.value,10),m=parseInt(msel.value,10);
+  if(isNaN(y)||isNaN(m))return;
+  calLeft=clampLeft(mIdx(y,m));calRender();
+}
 function buildMonth(idx){
   var y=Math.floor(idx/12),m=idx%12,start=new Date(y,m,1).getDay(),dim=new Date(y,m+1,0).getDate();
   var dow=['S','M','T','W','T','F','S'],h='<div class="hcal"><div class="hcal-hd">'+MON[m]+' '+y+'</div><div class="hgrid">';
@@ -376,7 +406,7 @@ function calRender(){
   g.innerHTML=buildMonth(calLeft)+buildMonth(calLeft+1);
   var p=document.getElementById('hist-prev'),n=document.getElementById('hist-next');
   if(p)p.disabled=(calLeft<=leftMin()); if(n)n.disabled=(calLeft>=leftMax());
-  calPaint();
+  calPaint();calSyncJump();
 }
 function calNav(step){calLeft=clampLeft(calLeft+step);calRender();}
 function calHover(d){if(penF&&!penT){hov=d;calPaint();}}
@@ -459,7 +489,7 @@ fetch('history.json').then(function(r){return r.ok?r.json():[];}).then(function(
     selF=DHI; selT=DHI;                                            // default view: latest close only
     var fe=document.getElementById('hist-from'),te=document.getElementById('hist-to');
     if(fe)fe.value=DHI; if(te)te.value=DHI;
-    if(tg)tg.disabled=false; calTrigText();
+    if(tg)tg.disabled=false; calInitJump(); calTrigText();
   } else if(tg){ tg.disabled=true; var tt=document.getElementById('hist-trig-txt'); if(tt)tt.textContent='No history yet'; }
   histRender();
 }).catch(function(){var el=document.getElementById('histwrap');if(el)el.innerHTML='<div class="sub">History unavailable.</div>';});
