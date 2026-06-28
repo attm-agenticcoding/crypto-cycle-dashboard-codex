@@ -23,6 +23,9 @@ header { padding:20px 24px; background:#161b22; border-bottom:1px solid #21262d;
 .posterior { background:#111923; border:1px solid #2d3a4b; border-radius:14px; padding:18px 20px; }
 .posterior-top { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
 .posterior h3 { margin:0; font-size:22px; }
+.spotbox { text-align:right; display:grid; gap:3px; justify-items:end; }
+.spotbox b { color:#e6edf3; font-size:20px; font-variant-numeric:tabular-nums; }
+.spotbox span { color:#8b949e; font-size:11px; text-transform:uppercase; letter-spacing:.04em; }
 .probgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0; }
 .prob { background:#0d1117; border:1px solid #283241; border-radius:9px; padding:9px 10px; }
 .prob b { display:block; font-size:17px; color:#e6edf3; font-variant-numeric:tabular-nums; }
@@ -197,7 +200,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
 </style></head><body>
       <header>
         <div class="title">Codex Crypto Cycle Dashboard</div>
-        <div class="meta">2026-06-28 · data as of 10:39 ET · <span class='live'>● LIVE intraday — provisional, not a close</span></div>
+        <div class="meta">2026-06-28 · data as of 10:41 ET · <span class='live'>● LIVE intraday — provisional, not a close</span></div>
       </header>
       
       <section class="codex">
@@ -215,7 +218,10 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
               <h3>BTC</h3>
               <div class="sub">future-low posterior · evidence HIGH</div>
             </div>
-            <span class="pill" style="background:#1f6feb">CODEX</span>
+            <div class="spotbox">
+              <b>$60,033</b>
+              <span>live price</span>
+            </div>
           </div>
           <div class="qgrid">
             <div class="qbox"><b>$28,457</b><span>low p10</span></div>
@@ -250,7 +256,10 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
               <h3>ETH</h3>
               <div class="sub">future-low posterior · evidence HIGH</div>
             </div>
-            <span class="pill" style="background:#1f6feb">CODEX</span>
+            <div class="spotbox">
+              <b>$1,581</b>
+              <span>live price</span>
+            </div>
           </div>
           <div class="qgrid">
             <div class="qbox"><b>$903</b><span>low p10</span></div>
@@ -280,7 +289,7 @@ pre.err { background:#161b22; border:1px solid #5a1f1f; color:#ffb4b4; padding:1
           </div>
         </section></div></section>
       <section class="planner"><h3>Weekly buy planner <span class="sub" style="font-weight:400">· Codex posterior target</span></h3><p class='sub'>Enter your total pool and how much you've <b>already deployed</b>. Each week it compares that against the Codex posterior target, paces the remaining working capital over the horizon, and holds reserve for either a deeper low or confirmation that the low is behind us. Runs entirely in your browser; nothing is sent anywhere.</p><div class="pgrid"><div class="pin"><label>BTC total pool</label><div class="inwrap"><span>$</span><input id="pool-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 100000"></div></div><div class="pin"><label>BTC already deployed</label><div class="inwrap"><span>$</span><input id="dep-BTC" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div><div class="pin"><label>ETH total pool</label><div class="inwrap"><span>$</span><input id="pool-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="e.g. 50000"></div></div><div class="pin"><label>ETH already deployed</label><div class="inwrap"><span>$</span><input id="dep-ETH" type="number" min="0" step="100" inputmode="decimal" oninput="recompute()" placeholder="0"></div></div></div><div id="pout" class="pout"></div><script>
-const POLICY={"BTC": {"now_f": 0.1769, "tgt_f": 0.8, "res_f": 0.2935, "H": 52, "anchor": 32292, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1841, "tgt_f": 0.7, "res_f": 0.3774, "H": 52, "anchor": 1002, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
+const POLICY={"BTC": {"now_f": 0.177, "tgt_f": 0.8, "res_f": 0.2934, "H": 52, "anchor": 32292, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}, "ETH": {"now_f": 0.1842, "tgt_f": 0.7, "res_f": 0.3774, "H": 52, "anchor": 1002, "regime": "POSTERIOR", "color": "#1f6feb", "dist": false, "keep_f": 0, "stop_pct": null, "stop_price": null}};
 
 function fmt(x){return '$'+Math.round(x).toLocaleString('en-US');}
 function pct(x){return (x*100).toFixed(0)+'%';}
