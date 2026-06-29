@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition": "codex-posterior",
-  "generated_at": "2026-06-28T21:59:19",
+  "generated_at": "2026-06-28T22:35:44",
   "run_date": "2026-06-28",
   "data_as_of": "2026-06-28",
   "data_age_days": 0,
@@ -264,7 +264,9 @@
         "deep_anchor": 24624.79,
         "tail_spent_fraction": 0.0,
         "redeploy_spent_fraction": 0.0,
-        "depth_floor_events": 5
+        "depth_floor_events": 5,
+        "price_improvement_events": 0,
+        "price_improvement_spent_fraction": 0.0
       },
       "future_low": {
         "p10": 33675.19,
@@ -350,7 +352,9 @@
         "deep_anchor": 918.51,
         "tail_spent_fraction": 0.0,
         "redeploy_spent_fraction": 0.0,
-        "depth_floor_events": 4
+        "depth_floor_events": 4,
+        "price_improvement_events": 0,
+        "price_improvement_spent_fraction": 0.0
       },
       "future_low": {
         "p10": 1206.62,
