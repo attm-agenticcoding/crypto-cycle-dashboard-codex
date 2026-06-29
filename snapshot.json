@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition": "codex-posterior",
-  "generated_at": "2026-06-28T21:08:58",
+  "generated_at": "2026-06-28T21:59:19",
   "run_date": "2026-06-28",
   "data_as_of": "2026-06-28",
   "data_age_days": 0,
@@ -294,6 +294,27 @@
         "down_30": 0.53684,
         "down_40": 0.182421
       },
+      "top_distribution": {
+        "phase": "inactive",
+        "risk_label": "LOW",
+        "active_distribution": false,
+        "position_target": 1.0,
+        "trim_fraction": 0.0,
+        "top_soon_probability": 0.094574,
+        "top_seen_probability": 0.303288,
+        "drawdown_26w_probability": 0.160663,
+        "drawdown_52w_probability": 0.223914,
+        "trail_stop_pct": null,
+        "stop_price": null,
+        "components": {
+          "extension": 0.4024766320919732,
+          "trend_extension": 0.04799871310649752,
+          "blowoff": 0.22672034037542868,
+          "ath_structure": 0.0001432046623721309,
+          "cycle_maturity": 0.9915909319340369,
+          "legacy_heat": 8.588227436024257e-08
+        }
+      },
       "diagnostics": {
         "label": "HIGH",
         "score": 72.0,
@@ -358,6 +379,27 @@
         "down_20": 0.142897,
         "down_30": 0.037018,
         "down_40": 0.004443
+      },
+      "top_distribution": {
+        "phase": "inactive",
+        "risk_label": "LOW",
+        "active_distribution": false,
+        "position_target": 1.0,
+        "trim_fraction": 0.0,
+        "top_soon_probability": 0.042838,
+        "top_seen_probability": 0.12073,
+        "drawdown_26w_probability": 0.116907,
+        "drawdown_52w_probability": 0.153098,
+        "trail_stop_pct": null,
+        "stop_price": null,
+        "components": {
+          "extension": 0.027597277533405174,
+          "trend_extension": 0.07114595040011129,
+          "blowoff": 0.25504425707145995,
+          "ath_structure": 2.412227435577186e-07,
+          "cycle_maturity": 0.9915909319340369,
+          "legacy_heat": 1.0070083737844061e-10
+        }
       },
       "diagnostics": {
         "label": "HIGH",
