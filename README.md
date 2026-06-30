@@ -16,7 +16,11 @@ Current display contract:
   layers for reserve, catch-up, redeployment, and fast-crash overlay;
 - accumulation regimes show historic accumulation deployment charts;
 - distribution-side regimes show Codex top/distribution history charts;
+- policy audit section shows the fixed utility objective, live signal ledger
+  summary, BTC/ETH asset gates, distribution weak spots, and refresh watchdog;
 - prediction history is published as `history.json`;
+- machine-readable governance artifacts are published under `reports/` as
+  `policy_audit.json` and `robust_evaluation.json`;
 - no user dollar amounts are published.
 
 Refresh cadence:
