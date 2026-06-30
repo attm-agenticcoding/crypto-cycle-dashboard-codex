@@ -21,6 +21,7 @@ Current display contract:
 
 Refresh cadence:
 
+- 06:30 ET live intraday snapshot;
 - 10:30 ET live intraday snapshot;
 - 14:30 ET live intraday snapshot;
 - 20:30 ET close snapshot, which writes the historical close record.
