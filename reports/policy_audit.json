@@ -124,7 +124,7 @@
       }
     ]
   },
-  "generated_at": "2026-06-30T20:30:39-04:00",
+  "generated_at": "2026-07-01T06:31:53-04:00",
   "ledger": {
     "count": 0,
     "last": null,
@@ -132,34 +132,34 @@
   },
   "live_record": {
     "data_age_days": 0,
-    "data_as_of": "2026-06-30",
-    "generated_at": "2026-06-30T20:30:37",
-    "key": "close|2026-06-30|2026-06-30T20:30",
+    "data_as_of": "2026-07-01",
+    "generated_at": "2026-07-01T06:31:52",
+    "key": "live|2026-07-01|2026-07-01T06:31",
     "material": false,
-    "run_date": "2026-06-30",
-    "run_kind": "close",
+    "run_date": "2026-07-01",
+    "run_kind": "live",
     "schema_version": 1,
     "signals": {
       "BTC": {
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.2654,
-        "price": 58523.32,
+        "price": 58665.0,
         "prior_close_target": 0.2654,
-        "raw_policy_gap": 0.0726,
-        "raw_posterior_target": 0.1928,
+        "raw_policy_gap": 0.0735,
+        "raw_posterior_target": 0.1919,
         "top_keep": 1.0,
         "top_phase": "inactive",
-        "top_risk": 0.2999
+        "top_risk": 0.3012
       },
       "ETH": {
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.3421,
-        "price": 1569.51,
+        "price": 1573.29,
         "prior_close_target": 0.3421,
-        "raw_policy_gap": 0.0008,
-        "raw_posterior_target": 0.3413,
+        "raw_policy_gap": 0.0017,
+        "raw_posterior_target": 0.3404,
         "top_keep": 1.0,
         "top_phase": "inactive",
         "top_risk": 0.327
@@ -189,15 +189,15 @@
   "schema_version": 1,
   "watchdog": {
     "data_age_days": 0.0,
-    "expected_latest_slot_et": "2026-06-30T20:30-04:00",
-    "last_close_log_done": "2026-06-29 22:47:58",
+    "expected_latest_slot_et": "2026-07-01T06:30-04:00",
+    "last_close_log_done": "2026-06-30 20:30:44",
     "last_live_log_done": "2026-06-30 16:00:27",
     "minutes_behind_expected": 0.0,
     "reasons": [
       "refresh cadence healthy"
     ],
-    "site_index_mtime_et": "2026-06-30T16:00:26-04:00",
-    "snapshot_generated_at_et": "2026-06-30T20:30-04:00",
+    "site_index_mtime_et": "2026-06-30T20:30:42-04:00",
+    "snapshot_generated_at_et": "2026-07-01T06:31-04:00",
     "status": "PASS"
   }
 }
