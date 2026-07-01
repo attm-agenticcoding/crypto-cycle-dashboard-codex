@@ -124,7 +124,7 @@
       }
     ]
   },
-  "generated_at": "2026-07-01T14:30:24-04:00",
+  "generated_at": "2026-07-01T15:00:22-04:00",
   "ledger": {
     "count": 2,
     "last": {
@@ -168,8 +168,8 @@
   "live_record": {
     "data_age_days": 0,
     "data_as_of": "2026-07-01",
-    "generated_at": "2026-07-01T14:30:22",
-    "key": "live|2026-07-01|2026-07-01T14:30",
+    "generated_at": "2026-07-01T15:00:20",
+    "key": "live|2026-07-01|2026-07-01T15:00",
     "material": false,
     "run_date": "2026-07-01",
     "run_kind": "live",
@@ -179,7 +179,7 @@
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.2654,
-        "price": 60078.0,
+        "price": 60087.0,
         "prior_close_target": 0.2654,
         "raw_policy_gap": 0.0815,
         "raw_posterior_target": 0.1839,
@@ -191,13 +191,13 @@
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.3421,
-        "price": 1617.85,
+        "price": 1614.41,
         "prior_close_target": 0.3421,
-        "raw_policy_gap": 0.0127,
-        "raw_posterior_target": 0.3294,
+        "raw_policy_gap": 0.0119,
+        "raw_posterior_target": 0.3302,
         "top_keep": 1.0,
         "top_phase": "inactive",
-        "top_risk": 0.3293
+        "top_risk": 0.3285
       }
     }
   },
@@ -224,15 +224,15 @@
   "schema_version": 1,
   "watchdog": {
     "data_age_days": 0.0,
-    "expected_latest_slot_et": "2026-07-01T14:30-04:00",
+    "expected_latest_slot_et": "2026-07-01T15:00-04:00",
     "last_close_log_done": "2026-06-30 20:30:44",
-    "last_live_log_done": "2026-07-01 14:00:25",
+    "last_live_log_done": "2026-07-01 14:30:29",
     "minutes_behind_expected": 0.0,
     "reasons": [
       "refresh cadence healthy"
     ],
-    "site_index_mtime_et": "2026-07-01T14:00:24-04:00",
-    "snapshot_generated_at_et": "2026-07-01T14:30-04:00",
+    "site_index_mtime_et": "2026-07-01T14:30:27-04:00",
+    "snapshot_generated_at_et": "2026-07-01T15:00-04:00",
     "status": "PASS"
   }
 }
