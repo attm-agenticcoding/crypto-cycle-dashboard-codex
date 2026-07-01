@@ -124,17 +124,52 @@
       }
     ]
   },
-  "generated_at": "2026-07-01T06:31:53-04:00",
+  "generated_at": "2026-07-01T09:30:21-04:00",
   "ledger": {
-    "count": 0,
-    "last": null,
+    "count": 1,
+    "last": {
+      "data_age_days": 1,
+      "data_as_of": "2026-06-30",
+      "generated_at": "2026-07-01T09:30:02",
+      "key": "close|2026-07-01|2026-07-01T09:30",
+      "material": true,
+      "run_date": "2026-07-01",
+      "run_kind": "close",
+      "schema_version": 1,
+      "signals": {
+        "BTC": {
+          "action": "HOLD",
+          "flags": [],
+          "full_policy_target": 0.2654,
+          "price": 58523.32,
+          "prior_close_target": 0.2654,
+          "raw_policy_gap": 0.0726,
+          "raw_posterior_target": 0.1928,
+          "top_keep": 1.0,
+          "top_phase": "inactive",
+          "top_risk": 0.2999
+        },
+        "ETH": {
+          "action": "HOLD",
+          "flags": [],
+          "full_policy_target": 0.3421,
+          "price": 1569.51,
+          "prior_close_target": 0.3421,
+          "raw_policy_gap": 0.0008,
+          "raw_posterior_target": 0.3413,
+          "top_keep": 1.0,
+          "top_phase": "inactive",
+          "top_risk": 0.327
+        }
+      }
+    },
     "open_material_signals": []
   },
   "live_record": {
     "data_age_days": 0,
     "data_as_of": "2026-07-01",
-    "generated_at": "2026-07-01T06:31:52",
-    "key": "live|2026-07-01|2026-07-01T06:31",
+    "generated_at": "2026-07-01T09:30:19",
+    "key": "live|2026-07-01|2026-07-01T09:30",
     "material": false,
     "run_date": "2026-07-01",
     "run_kind": "live",
@@ -144,22 +179,22 @@
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.2654,
-        "price": 58665.0,
+        "price": 58712.0,
         "prior_close_target": 0.2654,
-        "raw_policy_gap": 0.0735,
-        "raw_posterior_target": 0.1919,
+        "raw_policy_gap": 0.0738,
+        "raw_posterior_target": 0.1916,
         "top_keep": 1.0,
         "top_phase": "inactive",
-        "top_risk": 0.3012
+        "top_risk": 0.3013
       },
       "ETH": {
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.3421,
-        "price": 1573.29,
+        "price": 1575.19,
         "prior_close_target": 0.3421,
-        "raw_policy_gap": 0.0017,
-        "raw_posterior_target": 0.3404,
+        "raw_policy_gap": 0.0022,
+        "raw_posterior_target": 0.3399,
         "top_keep": 1.0,
         "top_phase": "inactive",
         "top_risk": 0.327
@@ -189,15 +224,15 @@
   "schema_version": 1,
   "watchdog": {
     "data_age_days": 0.0,
-    "expected_latest_slot_et": "2026-07-01T06:30-04:00",
+    "expected_latest_slot_et": "2026-07-01T09:30-04:00",
     "last_close_log_done": "2026-06-30 20:30:44",
-    "last_live_log_done": "2026-06-30 16:00:27",
+    "last_live_log_done": "2026-07-01 06:31:58",
     "minutes_behind_expected": 0.0,
     "reasons": [
       "refresh cadence healthy"
     ],
-    "site_index_mtime_et": "2026-06-30T20:30:42-04:00",
-    "snapshot_generated_at_et": "2026-07-01T06:31-04:00",
+    "site_index_mtime_et": "2026-07-01T09:30:07-04:00",
+    "snapshot_generated_at_et": "2026-07-01T09:30-04:00",
     "status": "PASS"
   }
 }
