@@ -124,7 +124,7 @@
       }
     ]
   },
-  "generated_at": "2026-07-01T20:30:36-04:00",
+  "generated_at": "2026-07-02T06:30:25-04:00",
   "ledger": {
     "count": 2,
     "last": {
@@ -167,37 +167,37 @@
   },
   "live_record": {
     "data_age_days": 0,
-    "data_as_of": "2026-07-01",
-    "generated_at": "2026-07-01T20:30:34",
-    "key": "close|2026-07-01|2026-07-01T20:30",
+    "data_as_of": "2026-07-02",
+    "generated_at": "2026-07-02T06:30:24",
+    "key": "live|2026-07-02|2026-07-02T06:30",
     "material": false,
-    "run_date": "2026-07-01",
-    "run_kind": "close",
+    "run_date": "2026-07-02",
+    "run_kind": "live",
     "schema_version": 1,
     "signals": {
       "BTC": {
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.2654,
-        "price": 59960.82,
+        "price": 61097.0,
         "prior_close_target": 0.2654,
-        "raw_policy_gap": 0.0585,
-        "raw_posterior_target": 0.2069,
+        "raw_policy_gap": 0.0658,
+        "raw_posterior_target": 0.1996,
         "top_keep": 1.0,
         "top_phase": "inactive",
-        "top_risk": 0.3028
+        "top_risk": 0.3031
       },
       "ETH": {
         "action": "HOLD",
         "flags": [],
-        "full_policy_target": 0.3478,
-        "price": 1607.7,
+        "full_policy_target": 0.3421,
+        "price": 1642.77,
         "prior_close_target": 0.3478,
-        "raw_policy_gap": 0.0,
-        "raw_posterior_target": 0.3478,
+        "raw_policy_gap": 0.0029,
+        "raw_posterior_target": 0.3392,
         "top_keep": 1.0,
         "top_phase": "inactive",
-        "top_risk": 0.328
+        "top_risk": 0.3321
       }
     }
   },
@@ -224,15 +224,15 @@
   "schema_version": 1,
   "watchdog": {
     "data_age_days": 0.0,
-    "expected_latest_slot_et": "2026-07-01T20:30-04:00",
-    "last_close_log_done": "2026-06-30 20:30:44",
+    "expected_latest_slot_et": "2026-07-02T06:30-04:00",
+    "last_close_log_done": "2026-07-01 20:30:40",
     "last_live_log_done": "2026-07-01 16:00:25",
     "minutes_behind_expected": 0.0,
     "reasons": [
       "refresh cadence healthy"
     ],
-    "site_index_mtime_et": "2026-07-01T16:00:24-04:00",
-    "snapshot_generated_at_et": "2026-07-01T20:30-04:00",
+    "site_index_mtime_et": "2026-07-01T20:30:38-04:00",
+    "snapshot_generated_at_et": "2026-07-02T06:30-04:00",
     "status": "PASS"
   }
 }
