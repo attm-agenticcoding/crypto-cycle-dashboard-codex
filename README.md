@@ -1,12 +1,10 @@
-# Codex Crypto Cycle Dashboard
+# Crypto Cycle Dashboard
 
-A public dashboard for the Codex BTC / ETH cycle model.
+A public, auto-updating dashboard tracking BTC / ETH cycle position, downside
+distribution, deployment policy targets, historical replays, and policy audit
+state.
 
-**Live:** https://attm-agenticcoding.github.io/crypto-cycle-dashboard-codex/
-
-The site is generated from:
-
-`/Users/block/agentic-coding/Claude/crypto-cycle-detection-codex/CryptoCycleDetection/dashboard.py`
+**Live:** https://attm-agenticcoding.github.io/crypto-cycle-dashboard/
 
 Current display contract:
 
@@ -15,7 +13,7 @@ Current display contract:
 - action sizing uses the raw structural posterior, with deployment policy
   layers for reserve, catch-up, redeployment, and fast-crash overlay;
 - accumulation regimes show historic accumulation deployment charts;
-- distribution-side regimes show Codex top/distribution history charts;
+- distribution-side regimes show top/distribution history charts;
 - policy audit section shows the fixed utility objective, live signal ledger
   summary, BTC/ETH asset gates, distribution weak spots, and refresh watchdog;
 - prediction history is published as `history.json`;

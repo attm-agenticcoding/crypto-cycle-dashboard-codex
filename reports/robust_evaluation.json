@@ -255,7 +255,7 @@
         },
         "canonical_end": "2019-12-31",
         "canonical_start": "2017-12-17",
-        "codex": {
+        "model": {
           "avg_cost": 5322.0293,
           "avg_cost_premium_to_low": 0.641343,
           "depth_floor_events": 13,
@@ -344,7 +344,7 @@
         },
         "canonical_end": "2019-12-31",
         "canonical_start": "2017-12-17",
-        "codex": {
+        "model": {
           "avg_cost": 232.3588,
           "avg_cost_premium_to_low": 1.756061,
           "depth_floor_events": 6,
@@ -433,7 +433,7 @@
         },
         "canonical_end": "2023-12-31",
         "canonical_start": "2021-11-10",
-        "codex": {
+        "model": {
           "avg_cost": 21887.1897,
           "avg_cost_premium_to_low": 0.324743,
           "depth_floor_events": 3,
@@ -522,7 +522,7 @@
         },
         "canonical_end": "2023-12-31",
         "canonical_start": "2021-11-10",
-        "codex": {
+        "model": {
           "avg_cost": 1444.0953,
           "avg_cost_premium_to_low": 0.362653,
           "depth_floor_events": 2,
@@ -611,7 +611,7 @@
         },
         "canonical_end": "2020-02-14",
         "canonical_start": "2019-06-26",
-        "codex": {
+        "model": {
           "avg_cost": 8377.2962,
           "avg_cost_premium_to_low": 0.160481,
           "depth_floor_events": 0,
@@ -700,7 +700,7 @@
         },
         "canonical_end": "2020-02-14",
         "canonical_start": "2019-06-26",
-        "codex": {
+        "model": {
           "avg_cost": 182.8978,
           "avg_cost_premium_to_low": 0.437711,
           "depth_floor_events": 0,
@@ -789,7 +789,7 @@
         },
         "canonical_end": "2020-09-30",
         "canonical_start": "2020-02-12",
-        "codex": {
+        "model": {
           "avg_cost": 7115.2151,
           "avg_cost_premium_to_low": 0.278862,
           "depth_floor_events": 0,
@@ -878,7 +878,7 @@
         },
         "canonical_end": "2020-09-30",
         "canonical_start": "2020-02-12",
-        "codex": {
+        "model": {
           "avg_cost": 177.2785,
           "avg_cost_premium_to_low": 0.33556,
           "depth_floor_events": 0,
@@ -1214,7 +1214,7 @@
             "value_at_post_top_low": 1.247391
           }
         },
-        "codex": {
+        "model": {
           "avg_sell_pct_of_peak": 0.941061,
           "avg_sell_price": 16663.26,
           "end_value": 18.173419,
@@ -1273,7 +1273,7 @@
             "value_at_post_top_low": 6.705006
           }
         },
-        "codex": {
+        "model": {
           "avg_sell_pct_of_peak": 0.794971,
           "avg_sell_price": 51002.09,
           "end_value": 7.573151,
@@ -1332,7 +1332,7 @@
             "value_at_post_top_low": 3.371579
           }
         },
-        "codex": {
+        "model": {
           "avg_sell_pct_of_peak": 0.794971,
           "avg_sell_price": 51002.09,
           "end_value": 3.252294,
@@ -1391,7 +1391,7 @@
             "value_at_post_top_low": 1.57725
           }
         },
-        "codex": {
+        "model": {
           "avg_sell_pct_of_peak": 0.913008,
           "avg_sell_price": 111630.28,
           "end_value": 1.684597,
@@ -1450,7 +1450,7 @@
             "value_at_post_top_low": 9.128283
           }
         },
-        "codex": {
+        "model": {
           "avg_sell_pct_of_peak": 0.743742,
           "avg_sell_price": 3471.13,
           "end_value": 20.194764,
@@ -1509,7 +1509,7 @@
             "value_at_post_top_low": 3.955337
           }
         },
-        "codex": {
+        "model": {
           "avg_sell_pct_of_peak": 0.743742,
           "avg_sell_price": 3471.13,
           "end_value": 8.838571,
@@ -1568,7 +1568,7 @@
             "value_at_post_top_low": 0.741527
           }
         },
-        "codex": {
+        "model": {
           "avg_sell_pct_of_peak": 0.926867,
           "avg_sell_price": 4478.02,
           "end_value": 1.096171,
@@ -2001,7 +2001,7 @@
     }
   },
   "generated_at": "2026-06-30T19:14:36.088362+00:00",
-  "history_file": "/Users/block/agentic-coding/Claude/crypto-cycle-detection-codex/reports/history.json",
+  "history_file": "/Users/block/agentic-coding/reference/crypto-cycle-detection-model/reports/history.json",
   "policy_objective": {
     "accumulation": {
       "notes": [
@@ -2020,7 +2020,7 @@
       "utility": "(value_at_post_top_low-1) + 0.30*(end_value_vs_hold-1) + 0.20*avg_sell_pct_of_peak - 0.20*max_portfolio_drawdown - 0.10*underdistribution"
     },
     "purpose": "Judge policy changes by causal capital-deployment outcomes, not by bottom/top forecast aesthetics.",
-    "version": "codex-policy-utility-v1"
+    "version": "policy-utility-v1"
   },
   "schema_version": 1,
   "verdict": {

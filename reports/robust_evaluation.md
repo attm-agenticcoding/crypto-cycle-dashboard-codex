@@ -1,4 +1,4 @@
-# Codex Robust Evaluation
+# Robust Evaluation
 
 Generated: 2026-06-30T19:14:36.088362+00:00
 Verdict: **PASS**
@@ -15,7 +15,7 @@ Reasons:
 
 ## Policy Objective
 
-- Version: codex-policy-utility-v1
+- Version: policy-utility-v1
 - Purpose: Judge policy changes by causal capital-deployment outcomes, not by bottom/top forecast aesthetics.
 - Accumulation utility: `pool_return - 0.30*avg_entry_premium_to_low - 0.20*max_portfolio_drawdown - 0.10*underparticipation_at_low + 0.05*dry_at_low_optional_reserve`
 - Distribution utility: `(value_at_post_top_low-1) + 0.30*(end_value_vs_hold-1) + 0.20*avg_sell_pct_of_peak - 0.20*max_portfolio_drawdown - 0.10*underdistribution`
@@ -35,7 +35,7 @@ Reasons:
 - Worst terminal edge vs median baseline: -2.1%
 - Mean terminal edge vs median baseline: 23.3%
 
-| Asset | Episode | Codex terminal | Edge vs median | Avg/low | Cost edge | Utility |
+| Asset | Episode | Policy terminal | Edge vs median | Avg/low | Cost edge | Utility |
 |---|---:|---:|---:|---:|---:|---:|
 | BTC | 2018 bear (single low) | 1.37 | 45.0% | 64.1% | -89.1% | 0.104855 |
 | ETH | 2018 bear (single low) | 0.55 | 17.6% | 175.6% | -432.7% | -1.11468 |
