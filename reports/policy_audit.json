@@ -124,7 +124,7 @@
       }
     ]
   },
-  "generated_at": "2026-07-03T21:47:46-04:00",
+  "generated_at": "2026-07-03T21:49:03-04:00",
   "ledger": {
     "count": 2,
     "last": {
@@ -168,36 +168,36 @@
   "live_record": {
     "data_age_days": 0,
     "data_as_of": "2026-07-03",
-    "generated_at": "2026-07-03T21:47:45",
-    "key": "live|2026-07-03|2026-07-03T21:47",
+    "generated_at": "2026-07-03T21:49:01",
+    "key": "close|2026-07-03|2026-07-03T21:49",
     "material": false,
     "run_date": "2026-07-03",
-    "run_kind": "live",
+    "run_kind": "close",
     "schema_version": 1,
     "signals": {
       "BTC": {
         "action": "HOLD",
         "flags": [],
         "full_policy_target": 0.2654,
-        "price": 62388.0,
+        "price": 62519.56,
         "prior_close_target": 0.2654,
-        "raw_policy_gap": 0.0607,
-        "raw_posterior_target": 0.2047,
+        "raw_policy_gap": 0.0613,
+        "raw_posterior_target": 0.2041,
         "top_keep": 1.0,
         "top_phase": "inactive",
-        "top_risk": 0.3017
+        "top_risk": 0.3018
       },
       "ETH": {
         "action": "HOLD",
         "flags": [],
-        "full_policy_target": 0.3553,
-        "price": 1745.6,
+        "full_policy_target": 0.353,
+        "price": 1756.21,
         "prior_close_target": 0.353,
         "raw_policy_gap": 0.0,
-        "raw_posterior_target": 0.3553,
+        "raw_posterior_target": 0.353,
         "top_keep": 1.0,
         "top_phase": "inactive",
-        "top_risk": 0.3345
+        "top_risk": 0.3352
       }
     }
   },
@@ -219,20 +219,20 @@
       "utility": "(value_at_post_top_low-1) + 0.30*(end_value_vs_hold-1) + 0.20*avg_sell_pct_of_peak - 0.20*max_portfolio_drawdown - 0.10*underdistribution"
     },
     "purpose": "Judge policy changes by causal capital-deployment outcomes, not by bottom/top forecast aesthetics.",
-    "version": "policy-utility-v1"
+    "version": "codex-policy-utility-v1"
   },
   "schema_version": 1,
   "watchdog": {
     "data_age_days": 0.0,
     "expected_latest_slot_et": "2026-07-03T20:30-04:00",
     "last_close_log_done": "2026-07-03 20:30:43",
-    "last_live_log_done": "2026-07-03 17:06:25",
+    "last_live_log_done": "2026-07-03 21:47:52",
     "minutes_behind_expected": 0.0,
     "reasons": [
       "refresh cadence healthy"
     ],
-    "site_index_mtime_et": "2026-07-03T20:30:40-04:00",
-    "snapshot_generated_at_et": "2026-07-03T21:47-04:00",
+    "site_index_mtime_et": "2026-07-03T21:47:50-04:00",
+    "snapshot_generated_at_et": "2026-07-03T21:49-04:00",
     "status": "PASS"
   }
 }
