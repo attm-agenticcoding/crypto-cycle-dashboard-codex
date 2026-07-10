@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "edition": "model-posterior",
+  "edition": "codex-posterior",
   "run_kind": "close",
   "forecast_anchor": "latest_close",
-  "generated_at": "2026-07-09T20:30:35",
-  "run_date": "2026-07-09",
+  "generated_at": "2026-07-10T08:59:11",
+  "run_date": "2026-07-10",
   "data_as_of": "2026-07-09",
-  "data_age_days": 0,
+  "data_age_days": 1,
   "masked": true,
   "static": true,
   "live_intraday": false,
   "close_reference": {},
-  "model_posteriors": {
+  "codex_posteriors": {
     "BTC": {
       "asset": "BTC",
       "as_of": "2026-07-09",
@@ -384,7 +384,7 @@
       "decision_probability_basis": "raw_structural",
       "decision": {
         "score_input_now_fraction": 0.27359,
-        "model_now_fraction": 0.18328,
+        "codex_now_fraction": 0.18328,
         "working_fraction": 0.8,
         "remaining_working_fraction": 0.61672,
         "reserve_fraction": 0.2,
@@ -409,7 +409,7 @@
             "score": 0.044695
           },
           {
-            "label": "model target",
+            "label": "codex target",
             "target_fraction": 0.18328,
             "expected_mark_to_low": 0.093288,
             "wait_regret": 0.034455,
@@ -457,7 +457,7 @@
         "price_band_pct": 0.724364,
         "date_window_days": 144
       },
-      "forecast_source": "valuation-state",
+      "forecast_source": "codex-valuation-state",
       "legacy_reference": {
         "price": 34499.569135,
         "date": "2026-10-22",
@@ -842,7 +842,7 @@
       "decision_probability_basis": "raw_structural",
       "decision": {
         "score_input_now_fraction": 0.347684,
-        "model_now_fraction": 0.356682,
+        "codex_now_fraction": 0.356682,
         "working_fraction": 0.7,
         "remaining_working_fraction": 0.343318,
         "reserve_fraction": 0.3,
@@ -883,7 +883,7 @@
             "score": 0.206855
           },
           {
-            "label": "model target",
+            "label": "codex target",
             "target_fraction": 0.356682,
             "expected_mark_to_low": 0.039789,
             "wait_regret": 0.094499,
@@ -915,7 +915,7 @@
         "price_band_pct": 0.422869,
         "date_window_days": 112
       },
-      "forecast_source": "valuation-state",
+      "forecast_source": "codex-valuation-state",
       "legacy_reference": {
         "price": 1397.72206,
         "date": "2026-07-29",
@@ -982,15 +982,15 @@
         "p90": 62117.36
       },
       "bottom_forecast": {
-        "source": "valuation-state",
-        "model_price": 42924.98,
-        "model_date": "2026-08-29",
-        "model_lo_price": 32081.3,
-        "model_hi_price": 63174.59,
-        "model_lo_date": "2026-07-09",
-        "model_hi_date": "2026-11-30",
-        "reference_model_price": 34499.57,
-        "reference_model_date": "2026-10-22"
+        "source": "codex-valuation-state",
+        "codex_price": 42924.98,
+        "codex_date": "2026-08-29",
+        "codex_lo_price": 32081.3,
+        "codex_hi_price": 63174.59,
+        "codex_lo_date": "2026-07-09",
+        "codex_hi_date": "2026-11-30",
+        "claude_reference_price": 34499.57,
+        "claude_reference_date": "2026-10-22"
       },
       "timing": {
         "p10": "2026-07-09",
@@ -1105,15 +1105,15 @@
         "p90": 1743.88
       },
       "bottom_forecast": {
-        "source": "valuation-state",
-        "model_price": 1643.33,
-        "model_date": "2026-07-23",
-        "model_lo_price": 1048.97,
-        "model_hi_price": 1743.88,
-        "model_lo_date": "2026-07-09",
-        "model_hi_date": "2026-10-29",
-        "reference_model_price": 1397.72,
-        "reference_model_date": "2026-07-29"
+        "source": "codex-valuation-state",
+        "codex_price": 1643.33,
+        "codex_date": "2026-07-23",
+        "codex_lo_price": 1048.97,
+        "codex_hi_price": 1743.88,
+        "codex_lo_date": "2026-07-09",
+        "codex_hi_date": "2026-10-29",
+        "claude_reference_price": 1397.72,
+        "claude_reference_date": "2026-07-29"
       },
       "timing": {
         "p10": "2026-07-09",
