@@ -9150,14 +9150,14 @@
     ],
     "status": "CORE_FAILED_STRICTER_GATES"
   },
-  "generated_at": "2026-07-10T08:59:13-04:00",
+  "generated_at": "2026-07-10T09:14:27-04:00",
   "ledger": {
-    "count": 41,
+    "count": 44,
     "last": {
       "data_age_days": 1,
       "data_as_of": "2026-07-09",
-      "generated_at": "2026-07-10T08:59:11",
-      "key": "close|2026-07-10|2026-07-10T08:59",
+      "generated_at": "2026-07-10T09:14:25",
+      "key": "close|2026-07-10|2026-07-10T09:14",
       "material": true,
       "run_date": "2026-07-10",
       "run_kind": "close",
@@ -9267,8 +9267,8 @@
   "live_record": {
     "data_age_days": 1,
     "data_as_of": "2026-07-09",
-    "generated_at": "2026-07-10T08:59:11",
-    "key": "close|2026-07-10|2026-07-10T08:59",
+    "generated_at": "2026-07-10T09:14:25",
+    "key": "close|2026-07-10|2026-07-10T09:14",
     "material": true,
     "run_date": "2026-07-10",
     "run_kind": "close",
@@ -9330,8 +9330,8 @@
     "reasons": [
       "market data age 1d"
     ],
-    "site_index_mtime_et": "2026-07-09T21:17:18-04:00",
-    "snapshot_generated_at_et": "2026-07-10T08:59-04:00",
+    "site_index_mtime_et": "2026-07-10T09:13:29-04:00",
+    "snapshot_generated_at_et": "2026-07-10T09:14-04:00",
     "status": "WATCH"
   }
 }
