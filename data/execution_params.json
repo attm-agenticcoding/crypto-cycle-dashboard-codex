@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "minute-rolling",
-  "generated_at": "2026-09-28T10:49:42.244899Z",
-  "data_as_of": "2026-09-25",
+  "generated_at": "2026-09-29T10:37:41.817308Z",
+  "data_as_of": "2026-09-28",
   "market_proxy": "BTCUSDT",
   "execution_instrument": "Grayscale Bitcoin Mini Trust ETF (BTC)",
   "timezone": "America/New_York",
@@ -12,7 +12,7 @@
   "lookback_sessions": 10,
   "first_offset_pct": 0.25,
   "spacing_pct": 0.8,
-  "expected_rungs_per_session": 1.4,
+  "expected_rungs_per_session": 1.5,
   "zero_fill_probability": 0.1,
   "sample_sessions": 151,
   "walk_forward_weeks": 29,
@@ -21,11 +21,6 @@
   "walk_forward_mean_passive_completion": 0.9183,
   "selection_rule": "one-standard-error plateau, then minimum distance from prior published parameters",
   "session_samples": [
-    {
-      "date": "2026-05-19",
-      "drawdown_pct": 1.00169,
-      "next_reference_return_pct": 0.24541
-    },
     {
       "date": "2026-05-20",
       "drawdown_pct": 0.27536,
@@ -469,6 +464,11 @@
     {
       "date": "2026-09-25",
       "drawdown_pct": 1.30397,
+      "next_reference_return_pct": -0.98229
+    },
+    {
+      "date": "2026-09-28",
+      "drawdown_pct": 1.0678,
       "next_reference_return_pct": null
     }
   ],
