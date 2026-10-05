@@ -2,16 +2,8 @@ name: Update execution parameters
 
 on:
   workflow_dispatch:
-  schedule:
-    # GitHub may delay or drop an individual scheduled event. Retry through the
-    # morning; the script exits before downloading when data_as_of is current.
-    # Include Saturday so Friday's completed session is published that weekend.
-    - cron: "7 0 * * 1-6"
-      timezone: "America/New_York"
-    - cron: "37 0 * * 1-6"
-      timezone: "America/New_York"
-    - cron: "17 2,6,10 * * 1-6"
-      timezone: "America/New_York"
+  # Retired on 2026-10-05: this legacy Codex execution dashboard no longer
+  # refreshes automatically. Keep manual dispatch and the published data intact.
 
 permissions:
   contents: write
